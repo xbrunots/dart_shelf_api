@@ -6,6 +6,7 @@
 # MIGRATION
 
 - 1 - Antes de iniciar crie a tabela de authenticação
+
  ` CREATE TABLE
                 public.df_users (
                   id serial NOT NULL,
@@ -24,6 +25,8 @@
                 public.df_users
               ADD
                 CONSTRAINT df_users_pkey PRIMARY KEY (id); `
+
+                
 
 # Preparar o ambiente
 - 1 -  Clone esse repositório no servidor
