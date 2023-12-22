@@ -162,7 +162,7 @@ extension mapExt on Map<String, dynamic> {
 Response toApiBadRequest(String error,
     {Map<String, /* String | List<String> */ Object>? headers}) {
   return Response.badRequest(
-    body: ResponseError.get(details: error.toString()),
+    body: ResponseError.get(message: error.toString()),
     headers: headers ?? HeadersUtils.headersDefault,
   );
 }
@@ -170,7 +170,7 @@ Response toApiBadRequest(String error,
 Response toApiForbidden(String error,
     {Map<String, /* String | List<String> */ Object>? headers}) {
   return Response.forbidden(
-    ResponseError.get(details: error.toString()),
+    ResponseError.get(message: error.toString()),
     headers: headers ?? HeadersUtils.headersDefault,
   );
 }

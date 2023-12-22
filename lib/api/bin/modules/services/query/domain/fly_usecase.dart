@@ -45,6 +45,10 @@ class FlyUseCase {
   Future<(Result?, String?)> executeQuery(query,
       {DriverEntity? driverEntity}) async {
     try {
+      print('Execute Query');
+      print(query);
+      print('----------');
+
       final connection =
           await DataBaseFactory.instance.connection(driverEntity: driverEntity);
       final result = await connection.execute(query.toString());

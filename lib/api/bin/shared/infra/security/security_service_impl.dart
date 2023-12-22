@@ -68,12 +68,12 @@ class SecurityServiceImp implements SecurityService<JWT> {
           Request req,
         ) {
           if (req.url.path == 'auth/login') return null;
-          if (req.url.path == 'auth/sigup') return null;
+          if (req.url.path == 'auth/signup') return null;
           if (req.url.path.startsWith('public/')) return null;
 
           if (req.context['jwt'] == null) {
             return Response.forbidden(
-              ResponseError.get(message: 'Invalid Token!'),
+              ResponseError.get(message: 'Token inválido ou expirado!'),
               headers: HeadersUtils.headersDefault,
             );
           }
