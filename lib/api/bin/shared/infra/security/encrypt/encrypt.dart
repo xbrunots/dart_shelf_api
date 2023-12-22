@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:crypto/crypto.dart';
 import 'package:encrypt/encrypt.dart';
 
 import '../../../../env.dart';
@@ -6,14 +9,14 @@ class AppEncrypt {
   AppEncrypt._();
 
   static final instance = AppEncrypt._();
-  final key = Key.fromUtf8(Env.encryptKey);
   final iv = IV.fromLength(16);
+  final enc = Encrypter(AES(Key.fromUtf8(Env.encryptKey)));
 
-  String? encrypt(String plainText) {
+  dynamic digest(String plainText) {
     try {
-      final enc = Encrypter(AES(key));
-      final encrypted = enc.encrypt(plainText, iv: iv);
-      return encrypted.base64;
+      var bytes = utf8.encode(plainText);
+      var digest = sha1.convert(bytes);
+      return digest;
     } catch (e) {
       print(e);
       return null;
@@ -22,9 +25,7 @@ class AppEncrypt {
 
   String? decrypt(String encryptedValue) {
     try {
-      final enc = Encrypter(AES(key));
-      final decrypted = enc.decrypt(Encrypted.fromBase64(encryptedValue), iv: iv);
-      return decrypted;
+      return enc.decrypt(Encrypted.fromBase16(encryptedValue), iv: iv);
     } catch (e) {
       print(e);
       return null;
