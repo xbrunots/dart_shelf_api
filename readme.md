@@ -1,4 +1,4 @@
-# Requisito
+# Requisitos
 - Docker
 - Docker Compose
 - Curl
