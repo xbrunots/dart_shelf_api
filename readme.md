@@ -1,4 +1,4 @@
-# Requisito
+# Requisitos
 - Docker
 - Docker Compose
 - Curl
@@ -18,6 +18,18 @@
 
 - 5 - Execute o comando `./lib/build.sh` para subir a API conteirnizada no docker
 
+-------
+# ACCESS/TOKEN
+
+
+### CREATE USER
+Crie um usuário para ter acesso ao recurso de criação de Token
+![image](https://github.com/xbrunots/dart_shelf_api/assets/4499957/8f404056-8420-42bb-ac1d-552071357e61)
+
+
+
+### TOKEN
+![image](https://github.com/xbrunots/dart_shelf_api/assets/4499957/1ca6a784-1cfc-4ccc-9dda-44b6057fedda)
 
 
 # CRUD
@@ -25,8 +37,7 @@
 #### TODAS AS CHAMADAS PRECISAM DO AUTHORIZATION TOKEN NO HEADER!
 ![img_5.png](img_5.png)
 
-### SELECT
-Exemplo aleatorio de chamada para listar itens na tebela **animals**
+### SELECT 
 ![img_1.png](img_1.png)
 
 
