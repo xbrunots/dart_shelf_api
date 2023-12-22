@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\wakka\datafly\windows\flutter\ephemeral\.plugin_symlinks\flutter_acrylic\windows\flutter_acrylic_plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\wakka\datafly\windows\flutter\ephemeral\.plugin_symlinks\flutter_acrylic\windows\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{EDCACA3F-A4A8-3106-933B-ADFD796528AA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

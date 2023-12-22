@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Dev",
+            "request": "launch",
+            "type": "dart",
+            "program": "bin/server.dart",
+            "args": [
+              "--flavor",
+              "development",
+              "--target",
+              "bin/server.dart"
+            ]
+          } 
+    ]
+}
