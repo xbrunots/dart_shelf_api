@@ -25,8 +25,7 @@
 #### TODAS AS CHAMADAS PRECISAM DO AUTHORIZATION TOKEN NO HEADER!
 ![img_5.png](img_5.png)
 
-### SELECT
-Exemplo aleatorio de chamada para listar itens na tebela **animals**
+### SELECT 
 ![img_1.png](img_1.png)
 
 
