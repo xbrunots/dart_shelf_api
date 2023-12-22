@@ -3,6 +3,29 @@
 - Docker Compose
 - Curl
 
+# MIGRATION
+
+- 1 - Antes de iniciar crie a tabela de authenticação
+ `  CREATE TABLE
+                public.df_users (
+                  id serial NOT NULL,
+                  created_at timestamp without time zone NOT NULL DEFAULT now(),
+                  email character varying(255) NOT NULL,
+                  pwd character varying(255) NOT NULL,
+                  status integer NULL DEFAULT 1,
+                  uid text NULL DEFAULT uuid_in (
+                    (
+                      md5(((random())::text || (clock_timestamp())::text))
+                    )::cstring
+                  ),
+                  name text NULL
+                );
+              
+              ALTER TABLE
+                public.df_users
+              ADD
+                CONSTRAINT df_users_pkey PRIMARY KEY (id); `
+
 # Preparar o ambiente
 - 1 -  Clone esse repositório no servidor
 
