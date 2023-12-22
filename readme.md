@@ -6,7 +6,7 @@
 # MIGRATION
 
 - 1 - Antes de iniciar crie a tabela de authenticação
- `  CREATE TABLE
+ ` CREATE TABLE
                 public.df_users (
                   id serial NOT NULL,
                   created_at timestamp without time zone NOT NULL DEFAULT now(),
@@ -19,8 +19,7 @@
                     )::cstring
                   ),
                   name text NULL
-                );
-              
+                );              
               ALTER TABLE
                 public.df_users
               ADD
